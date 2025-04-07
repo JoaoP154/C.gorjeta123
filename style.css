@@ -2,20 +2,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Space Mono, serif"
+    font-family: 'Space Mono', serif;
 }
 
 :root {
-    --green-100: #f3f9fa
-    --green-200: #c5e4e7
-    --green-300: #9ebbb0
-    --green-400: #7f9d9f
-    --green-500: #5e7a7d
-    --green-600: #547878
-    --green-700: #3d6666
-    --green-800: #08474b
-    --light-green: #26c2ac
-    --white: #ffff
+    --green-100: #f3f9fa;
+    --green-200: #c5e4e7;
+    --green-300: #9ebbb0;
+    --green-400: #7f9d9f;
+    --green-500: #5e7a7d;
+    --green-600: #547878;
+    --green-700: #3d6666;
+    --green-800: #08474b;
+    --light-green: #26c2ac;
+    --white: #ffffff;
 }
 
 body {
@@ -29,7 +29,7 @@ header {
 }
 
 main {
-    background-color: var(white);
+    background-color: var(--white);
     padding: 2rem;
 }
 
@@ -39,22 +39,25 @@ main {
 }
 
 .conta label,
-.gorjeta label {
+.gorjeta label,
+.pessoas label {
     color: var(--green-500);
     font-weight: 700;
 }
 
-.conta div {
+.conta div,
+.pessoas div {
     margin-top: 0.4rem;
     background-color: var(--green-100);
-    padding: 0.4rem 1.2 rem;
+    padding: 0.4rem 1.2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-radius: 0.3125rem;
 }
 
-.conta input {
+.conta input,
+.pessoas input {
     border: none;
     text-align: right;
     width: 100%;
@@ -65,17 +68,17 @@ main {
     outline: none;
 }
 
-.conta input ::placeholder {
+.conta input::placeholder {
     color: var(--green-300);
 }
 
-.conta:has(input:focus) div {
+.conta:has(input:focus) div,
+.pessoas:has(input:focus) div {
     outline: 2px solid var(--light-green);
 }
 
 .gorjeta div {
     margin-top: 1rem;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
@@ -84,7 +87,7 @@ main {
 .gorjeta input {
     font-size: 1.5rem;
     font-weight: 700;
-    border: none
+    border: none;
     text-align: center;
     outline: none;
     padding-block: 0.4rem;
@@ -101,4 +104,8 @@ main {
 
 .gorjeta #outra::placeholder {
     color: var(--green-300);
+}
+
+.pessoas #erro {
+    display: none;
 }

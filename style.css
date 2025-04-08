@@ -31,10 +31,12 @@ header {
 main {
     background-color: var(--white);
     padding: 2rem;
+    border-radius: 1.5625rem;
 }
 
 .conta,
-.gorjeta {
+.gorjeta,
+.pessoas {
     margin-bottom: 2rem;
 }
 
@@ -68,7 +70,8 @@ main {
     outline: none;
 }
 
-.conta input::placeholder {
+.conta input::placeholder,
+.pessoas input::placeholder {
     color: var(--green-300);
 }
 
@@ -79,6 +82,7 @@ main {
 
 .gorjeta div {
     margin-top: 1rem;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;

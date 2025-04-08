@@ -76,7 +76,8 @@ main {
 }
 
 .conta:has(input:focus) div,
-.pessoas:has(input:focus) div {
+.pessoas:has(input:focus) div,
+.gorjeta #outra:focus {
     outline: 2px solid var(--light-green);
 }
 
@@ -145,7 +146,6 @@ main {
     margin-bottom: 1.25rem;
 }
 
-
 .resultados .total {
     margin-bottom: 2rem;
 }
@@ -160,6 +160,12 @@ main {
     text-transform: uppercase;
     font-size: 1.25rem;
     padding-block: 0.5rem;
+}
+
+.conta input::-webkit-inner-spin-button,
+.pessoas input::-webkit-inner-spin-button,
+.gorjeta#outra::-webkit-inner-spin-button {
+    display: none;
 }
 
 @media (nin-width: 920px) {
@@ -188,13 +194,19 @@ main {
         width: 100%;
     }
 
-
-    .conta input::-webkit-inner-spin-button,
-    .pessoas input::-webkit-inner-spin-button {
-    display: none;
-}
-
     .gorjeta div {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .resultados {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between
+        
+        padding: 2rem;
+    }
+
+    .resultados div > strong {
+        font-size: 3rem;
     }
 }

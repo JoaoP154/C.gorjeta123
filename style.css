@@ -198,12 +198,12 @@ main {
     display: none;
 }
 
-@media (nin-width: 920px) {
+@media (min-width: 920px) {
 
     body {
         display: flex;
         flex-direction: column;
-        min-height: 100svh
+        min-height: 100svh;
         justify-content: center;
         gap: 5rem;
     }
@@ -231,7 +231,7 @@ main {
     .resultados {
         display: flex;
         flex-direction: column;
-        justify-content: space-between
+        justify-content: space-between;
         
         padding: 2rem;
     }
